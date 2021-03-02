@@ -1,0 +1,1 @@
+It's very easy and simple **Python** project to extract contacts and notification from an *Excel* sheet and send the notification to the corresponding contact using [Twilio!](https://www.twilio.com/)
