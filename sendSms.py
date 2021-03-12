@@ -1,5 +1,5 @@
 import os
-import readData
+from readData import *
 from twilio.rest import Client
 
 
@@ -10,7 +10,14 @@ auth_token = ''
 
 client = Client(account_sid, auth_token)
 
-message =client.messages.create(from_='+17076402663',
-                      to='+254714869114',
-                      body='Hi Man, whats up')
+#message =client.messages.create(from_='+17076402663',
+                     # to='+254714869114',
+                      #body='Hi Man, whats up')
+
+message = client.messages \
+    .create(
+         from_='+17076402663',
+         body="A happy new week! Here is a list of people on duty this week 🙏 {} See you on Thur at 7pm".format(text_msg),
+         to='+254712423207'
+     )
 

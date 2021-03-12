@@ -10,7 +10,10 @@ schedules = data.to_dict('records')
 current_data = datetime.now().date()
 year, week_num, day_of_week = current_data.isocalendar()
 
+
 for schedule in schedules:
     if schedule['Week'] == week_num:
         text_msg =pd.DataFrame.from_dict(schedule, orient='index')
-        print(text_msg)
+        #text_msg =pd.DataFrame(schedule, index=['first'])
+        print (text_msg)
+
